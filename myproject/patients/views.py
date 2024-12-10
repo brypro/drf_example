@@ -3,6 +3,7 @@ from .models import Patient
 from .serializers import PatientSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from django.views.generic import TemplateView
 
 class PatientViewSet(viewsets.ModelViewSet):
     queryset = Patient.objects.all()
@@ -19,3 +20,6 @@ class PatientViewSet(viewsets.ModelViewSet):
             return Response(serializer.data)
         else:
             return Response({"detail": "No se especificó un diagnóstico para filtrar."}, status=400)
+
+class PatientsListView(TemplateView):
+    template_name = 'patients/index.html'
