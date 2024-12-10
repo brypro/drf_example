@@ -19,7 +19,7 @@ class PatientViewSet(viewsets.ModelViewSet):
     )
     @action(detail=False, methods=['get'], url_path='por_diagnostico')
     def por_diagnostico(self, request):
-        diagnostico_query = request.query_params.get('q', None)
+        diagnostico_query = request.query_params.get('diagnostico', None)
         if diagnostico_query:
             pacientes = self.queryset.filter(diagnostico__icontains=diagnostico_query)
             serializer = self.get_serializer(pacientes, many=True)
