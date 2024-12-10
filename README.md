@@ -49,7 +49,7 @@ Este proyecto es un ejemplo de una API para gestionar pacientes utilizando Djang
     python manage.py runserver
     ```
 
-   La API estará disponible en `http://localhost:8000/api/patients/` y la página inicial (si se configuró así) en `http://localhost:8000/lista_pacientes/`.
+   La API estará disponible en `http://localhost:8000/api/patients/` la lista en `http://localhost:8000/lista_pacientes/`. y la documentación en `http://localhost:8000/swagger/`
 
 ## Uso
 
